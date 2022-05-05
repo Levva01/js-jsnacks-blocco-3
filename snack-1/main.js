@@ -9,9 +9,17 @@ let sum = array1[0];
 let i = 1;
 
 while(sum < 50){
-    array1.push(Number(prompt("Inserisci un numero")));
-    sum = sum + array1[i];
-    i++;
+    
+        array1.push(Number(prompt("Inserisci un numero")));
+        sum = sum + array1[i];
+        i++;
+
+        if(sum > 49){
+            array1.pop([i]);
+            sum = sum - array1[i];
+            break;
+        }
+    
 }
 
 console.log(array1);
